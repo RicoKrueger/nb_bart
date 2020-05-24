@@ -1072,33 +1072,6 @@ class SyntheticData:
 if __name__ == "__main__":
     
     import pickle
-
-    ###
-    #Load data
-    ###
-    
-    df = pd.read_csv('crash_data.csv')
-    df = df[df['year'] == 2010].copy()
-    
-    df['intercept'] = 1
-    
-    #######
-    #Fixed parameters only
-    #######
-    """
-    ###
-    #Model specification
-    ###
-    
-    y = np.array(df['crash_count'])    
-    x_fix = np.array(df[[
-        'intercept', 'facility_ih', 'asphalt_pavement', 'rural_area', 
-        'asphalt_shoulder', 'good_road_condition', 'truck_aadt_pct', 'iri',
-        'log_aadt', 'speed_lim',
-        'narrow_shoulder_left', 'narrow_shoulder_right'
-        ]])
-    data = Data(y, x_fix, x_rnd=None, W=None)
-    """
     
     ###
     #Generate data
